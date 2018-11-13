@@ -1,32 +1,138 @@
-.App {
-  text-align: center;
+* {
+    box-sizing: border-box;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.app {
+    width: 1280px;
+    max-width: 100%;
+    padding: 40px 10px;
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.body {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
+.pane {
+    flex: 1;
+    width: 100%;
+    margin: 0 5px;
+    flex-basis: 320px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.status-wrapper {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+}
+
+.status {
+    border: 1px solid;
+    padding: 15px;
+    background-color: rgba(255,255,255,.95);
+    text-align: center;
+    border-radius: 2px;
+    z-index: 1;
+    position: relative;
+    pointer-events: all;
+}
+
+.status__progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    height: 4px;
+    width: 0;
+    transition-property: width;
+    transition-timing-function: cubic-bezier(.41,.18,.57,1.03);
+}
+
+/**/
+.manage {
+    padding: 15px;
+    border: 1px solid;
+    border-radius: 2px;
+    margin: 0 5px;
+}
+
+/**/
+.news {
+    position: relative;
+}
+
+.news._loading .card {
+    opacity: .5;
+}
+
+.cards {
+    position: relative;
+}
+
+.card {
+    /*border-radius: 7px;*/
+    padding: 15px;
+    font-size: 13px;
+    margin: 0 0 10px 0;
+    background: #fafafa !important;
+    border: 1px solid;
+    border-radius: 2px;
+}
+
+.card__title {
+    margin: 0 0 .1em;
+}
+
+.card__date {
+    margin-right: 1em;
+}
+
+.card__meta {
+    font-size: .8em;
+}
+
+.card__desc {
+    margin-top: .5em;
+}
+
+/**/
+.sources-wrapper {
+    position: relative;
+}
+
+.sources._loading .source {
+    opacity: .5;
+}
+
+.source {
+    font-size: 14px;
+    padding: 7px;
+    border: 1px solid;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 2px;
+}
+
+.source__image-wrapper {
+    flex-shrink: 0;
+    margin-right: 10px;
+    overflow: hidden;
+}
+
+.source__image-wrapper img {
+    display: block;
+    border-radius: 5px;
+}
+
+.source__title {
+    flex: 1;
 }

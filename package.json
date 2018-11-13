@@ -3,9 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "classnames": "2.2.6",
+    "evergreen-ui": "4.5.0",
+    "immutability-helper": "2.8.1",
+    "lodash": "4.17.11",
+    "prop-types": "15.6.2",
+    "randomcolor": "0.5.3",
     "react": "^16.6.1",
+    "react-addons-update": "15.6.2",
     "react-dom": "^16.6.1",
-    "react-scripts": "2.1.1"
+    "react-scripts": "2.1.1",
+    "rxjs": "6.3.3",
+    "rxjs-compat": "^6.3.3",
+    "tinycolor2": "^1.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
