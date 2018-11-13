@@ -9,7 +9,7 @@ import DEMO_DATA from './demodata'
 
 const SERVER_STAY_FIXED_MS = 30 * 1e3
 export const ENDPOINT_FAIL_CHANCE = .75
-const SERVER_FIX_FAIL_CHANCE = .30
+const SERVER_FIX_FAIL_CHANCE = .66
 const SERVER_FAIL_RESPONSE = 'There is a server-side problem taking place.'
 
 let lastTimeFixed = 0
