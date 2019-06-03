@@ -29,10 +29,10 @@ export default class API {
     static requestRetry({fetchFn, fixFn, onFetchFail, onFixSucceed, onFetchSucceed, onFetchFinalFail}) {
         return defer(() => from(fetchFn()))
             .pipe(
-                retryWhen((errors) =>
-                    errors.pipe(
+                retryWhen((errorsObs) =>
+                    errorsObs.pipe(
                         tap(onFetchFail),
-                        flatMap(() => defer(() => fixFn()).pipe(
+                        flatMap(() => fixFn().pipe(
                             flatMap((v) => {
                                 if (v instanceof Err) throw v
                                 return of(v)
